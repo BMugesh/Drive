@@ -7,7 +7,7 @@ import {
   BALA_CRIES, PHASES,
   anuPlan, kPlan, bPlan,
 } from './data';
-import './App.css';
+
 /* ─── GLOBAL KEYFRAMES ───────────────────────────────────────────────────────*/
 function GS() {
   return (
@@ -214,6 +214,7 @@ function DayCard({ day, dayIdx, checked, onToggle, bc, cc, badge, phase, withCon
 
 /* ─── LANDING ────────────────────────────────────────────────────────────────*/
 function Landing({ setView }) {
+  document.title = 'The Victory Vault';
   const [greeting] = useState(() => rnd(GREETINGS));
   const [sub] = useState(() => rnd(HERO_SUBS));
   const [bg] = useState(() => rnd(HERO_BGS));
@@ -281,6 +282,7 @@ function Landing({ setView }) {
 
 /* ─── ANU DASHBOARD ──────────────────────────────────────────────────────────*/
 function AnuDB({ setView }) {
+  document.title = "Anu's Cadence Vault ✨";
   const [checked, setChecked] = useState(() => loadChecked('vv_anu', anuPlan));
   const [scripture] = useState(() => rnd(ANU_VERSES));
   const [note] = useState(() => rnd(ANU_NOTES));
@@ -383,6 +385,7 @@ function AnuDB({ setView }) {
 
 /* ─── KRUTHIKA DASHBOARD ─────────────────────────────────────────────────────*/
 function KDB({ setView }) {
+  document.title = "Kruthika's Command Vault 💙";
   const [checked, setChecked] = useState(() => loadChecked('vv_kruthika', kPlan));
   const [quote] = useState(() => rnd(K_QUOTES));
   const [note] = useState(() => rnd(K_NOTES));
@@ -483,6 +486,7 @@ function KDB({ setView }) {
 
 /* ─── BALA DASHBOARD ─────────────────────────────────────────────────────────*/
 function BalaDB({ setView }) {
+  document.title = "Bala's Execution Vault ⚡";
   const [checked, setChecked] = useState(() => loadChecked('vv_bala', bPlan));
   const [warcry] = useState(() => rnd(BALA_CRIES));
   const [filter, setFilter] = useState('All');
